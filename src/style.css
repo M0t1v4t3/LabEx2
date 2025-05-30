@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f5f7fa;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app-layout {
+  display: flex;
+  width: 90vw;
+  max-width: 1200px;
+  min-height: 90vh;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  background: white;
+  overflow: hidden;
+}
+
+
+.sidebar {
+  width: 280px;
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 0.5rem;
+}
+
+.sidebar h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.deadline p {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timer-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  color: #1abc9c;
+  user-select: none;
+  transition: color 0.3s ease;
+
+}
+
+.timer-text.warning {
+  color: #e74c3c;
+  animation: pulse 1.5s infinite;
+}
+
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+
+.exam-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+
+.exam-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.exam-layout {
+  display: flex;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow: hidden;
+}
+
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navigation-buttons button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 40px;
+}
+
+.navigation-buttons button:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  color: #999;
+}
+
+.navigation-buttons button:hover:not(:disabled) {
+  background-color: #c0c0c0;
+}
+
+
+.submit-button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #16a085;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+}
+
+
+label input[type="radio"],
+label input[type="checkbox"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
